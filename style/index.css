@@ -1,1 +1,125 @@
-/* Add CSS styling here */
+/* Add CSS styling here
+ed. Reset styles quite often appear in CSS frameworks, and the original "meyerweb reset" found its way into Blueprint, among others.
+
+The reset styles given here are intentionally very generic. There isn't any default color or background set for the body element, for example. I don't particularly recommend that you just use this in its unaltered state in your own projects. It should be tweaked, edited, extended, and otherwise tuned to match your specific reset baseline. Fill in your preferred colors for the page, links, and so on.
+
+In other words, this is a starting point, not a self-contained black box of no-touchiness.
+
+If you want to use my reset styles, then feel free! It's all explicitly in the public domain (I have to formally say that or else people ask me about licensing). You can grab a copy of the file to use and tweak as fits you best. If you're more of the copy-and-paste type, or just want an in-page preview of what you'll be getting, here it is.
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/* html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+header {
+    background-color: lightgrey;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.middle {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.intro {
+    padding: 20px;
+    width: 50%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.portfolio-element {
+    text-align: center;
+}
+
+footer {
+    background-color: lightgrey;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+@media(max-width:800px){
+    .row div{
+        width: 20%;
+    }
+    .middle img{
+        width: 40%;
+    }
+}
+
+@media(max-width: 500px){
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    button{
+        width: 40%;
+        margin: 1% 0;
+    }
+
+    .middle{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .middle div{
+        width: 90%;
+    }
+
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .row div{
+        width: 40%;
+        margin: 2% 0;
+    }
+}
